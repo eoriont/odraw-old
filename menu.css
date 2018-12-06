@@ -1,0 +1,102 @@
+.toggle-button {
+  position: fixed;
+  width: 44px;
+  height: 40px;
+  padding: 4px;
+  margin: 20px;
+  transition: .25s;
+  z-index: 15;
+}
+.toggle-button:hover {
+  cursor: pointer;
+}
+.toggle-button .menu-bar {
+  position: absolute;
+  border-radius: 2px;
+  width: 80%;
+  transition: .5s;
+}
+.toggle-button .menu-bar-top {
+  border: 4px solid #FFF;
+  border-bottom: none;
+  top: 0;
+}
+.toggle-button .menu-bar-middle {
+  height: 4px;
+  background-color: #FFF;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  width: 95%
+  top: 4px;
+}
+.toggle-button .menu-bar-bottom {
+  border: 4px solid #FFF;
+  border-top: none;
+  top: 22px;
+}
+.button-open .menu-bar-top {
+  transform: rotate(45deg) translate(8px, 8px);
+  transition: .5s;
+}
+.button-open .menu-bar-middle {
+  transform: translate(230px);
+  transition: .1s ease-in;
+  opacity: 0;
+}
+.button-open .menu-bar-bottom {
+  transform: rotate(-45deg) translate(8px, -7px);
+  transition: .5s;
+}
+.menu-wrap {
+    background-color: #6b6b6b;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 280px;
+    margin-left: -280px;
+    font-size: 1em;
+    font-weight: 700;
+    overflow: auto;
+    transition: .25s;
+    z-index: 10;
+}
+.menu-show {
+    margin-left: 0;
+}
+.menu-sidebar {
+  margin-top: 50%;
+  font-size: 20pt;
+}
+.menu-sidebar li > a::after {
+    content: "";
+    display: block;
+    height: 0.15em;
+    position: absolute;
+    top: 100%;
+    width: 102%;
+    left: 50%;
+    transform: translate(-50%);
+    background-image: linear-gradient(to right, transparent 50.3%, #FFFA3B 50.3%);
+    transition: background-position .2s .1s ease-out;
+    background-size: 200% auto;
+}
+.menu-sidebar li > a:hover::after {
+    background-position: -100% 0;
+}
+.menu,.sub-menu {
+  list-style-type: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
